@@ -35,7 +35,7 @@ const WebSocket = require('ws')
 const client = new Discord.Client();
 
 function decodeCVMChat(msg) {
-  return msg.replaceAll("&lt;", "<").replaceAll("&gt;", ">").replaceAll("&#x27;", "'").replaceAll("&quot;", "\"").replaceAll("&amp;", "&").replaceAll("&#x2F;", "/").replaceAll('<@', '<m@').replaceAll('@here', '@ here').replaceAll('@everyone', '@ everyone');
+  return msg.replace(/&lt;/g, "<").replace(/&gt;/, ">").replace(/&#x27;/g, "'").replace(/&quot;/g, "\"").replace(/&amp;/g, "&").replace(/#x2F;/g, "/").replace(/<@/g, '<m@').replace(/@here/g, '@ here').replace(/@everyone/g, '@ everyone');
 }
 
 function checkIpGrabber(link) { // links taken from grabify custom links
