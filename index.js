@@ -166,6 +166,7 @@ function bridgeToCVM(msg) {
 
 client.once('ready', () => {
   console.log('Ready!');
+  client.user.setActivity("use !collabvm help");
 });
 
 client.on('message', msg => {
@@ -176,5 +177,4 @@ client.on('message', msg => {
     console.error(e);
   }
 });
-
 client.login(process.env.TOKEN);
