@@ -176,5 +176,5 @@ client.on('message', msg => {
     console.error(e);
   }
 });
-
+client.user.setActivity("use !collabvm help");
 client.login(process.env.TOKEN);
