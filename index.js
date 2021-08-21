@@ -138,7 +138,7 @@ function processCommand(msg) {
       return;
     }
     if (checkIpGrabber(cmd[2])) {
-      msg.channel.send('IP grabber detected');
+      msg.channel.send('IP grabber detected! Please don\'t try to log IP addresses.');
       return;
     }
     msg.channel.send(`Bridging ${cmd[3]}@${cmd[2]} to this channel`)
