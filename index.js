@@ -33,6 +33,7 @@ function encodeCommand(cypher) {
 const Discord = require('discord.js');
 const WebSocket = require('ws')
 const client = new Discord.Client();
+const client = new Discord.Client({ ws: { properties: { $browser: "Discord iOS" }} });
 
 function decodeCVMChat(msg) {
   return msg.replace(/&lt;/g, "<").replace(/&gt;/, ">").replace(/&#x27;/g, "'").replace(/&quot;/g, "\"").replace(/&amp;/g, "&").replace(/#x2F;/g, "/").replace(/<@/g, '<m@').replace(/@here/g, '@ here').replace(/@everyone/g, '@ everyone');
